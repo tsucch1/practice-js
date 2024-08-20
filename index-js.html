@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice-js</title>
+  </head>
+  <body>
+    <!-- まずは始めてみよう -->
+    <script>
+      alert("Hello world!!");
+    </script>
+    <div id="t1"></div>
+    <script>
+      document.getElementById("t1").innerHTML = "Hello world!!";
+    </script>
+    <script>
+      console.log("Hello world!!");
+    </script>
+    <div id="d1"></div>
+    <script>
+      document.getElementById("d1").innerHTML = new Data().toString();
+    </script>
+    <div id="d2">&nbsp;</div>
+    <script>
+      setInterval(function () {
+        document.getElementById("d2").innerHTML = new Date().toString();
+      }, 1000);
+    </script>
+  </body>
+</html>
