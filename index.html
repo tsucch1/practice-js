@@ -4,30 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>practice-js</title>
+    <script src="practice.js"></script>
   </head>
   <body>
-    <!-- まずは始めてみよう -->
-    <script>
-      alert("Hello world!!");
-    </script>
-    <div id="t1"></div>
-    <script>
-      document.getElementById("t1").innerHTML = "Hello world!!";
-    </script>
-    <script>
-      console.log("Hello world!!");
-    </script>
-    <!-- 表示されない -->
-    <div id="d1"></div>
-    <script>
-      document.getElementById("d1").innerHTML = new Data().toLocalString();
-    </script>
-    <div id="d2"></div>
-    <script>
-      setInterval(function () {
-        document.getElementById("d2").innerHTML =
-          new Date().toLocaleDateString();
-      }, 1000);
-    </script>
+    <input type="button" value="OK" onclick="ohayou()" />
   </body>
 </html>
