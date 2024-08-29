@@ -17,4 +17,27 @@ for (let i = 0; i < 10; i++) {
   console.log(i);
 }
 
-// 条件分岐から
+const c = 5;
+console.log(c);
+
+// 条件分岐
+
+n = 5;
+if (n < 10) {
+  alert("Small");
+} else {
+  alert("Big");
+}
+
+if (n < 10) {
+  alert("Small");
+}
+
+n = 30;
+if (n < 10) {
+  alert("Small");
+} else if (n > 20) {
+  alert("Big");
+} else {
+  alert("Normal");
+}
