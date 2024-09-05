@@ -1,9 +1,11 @@
 // JSの書き方
+
 function ohayou() {
   alert("Hello!");
 }
 
 // 構文
+
 var a = 3;
 let b = 3;
 {
@@ -70,8 +72,9 @@ console.log(c);
 // }
 
 // 繰り返し
+
 n = 0;
-while (0 < 10) {
+while (n < 10) {
   console.log(n);
   n++;
 }
@@ -97,7 +100,7 @@ for (var d in data) {
 }
 
 for (var attr in navigator) {
-  console, log(attr);
+  console.log(attr);
 }
 
 var set = new Set();
@@ -107,4 +110,69 @@ for (var value of set) {
   console.log(value);
 }
 
-// ループを抜ける
+// // ループを抜ける
+
+for (var i = 0; i < 10; i++) {
+  if (i == 5) {
+    break;
+  }
+  console.log(i);
+}
+
+abc: for (var i = 0; i < 10; i++) {
+  for (var j = 0; j < 10; j++) {
+    xx = i * 10 + j;
+    if (xx > 20) {
+      break abc;
+    }
+    console.log(xx + "<br>");
+  }
+}
+
+for (var i = 0; i < 10; i++) {
+  if (i == 5) {
+    continue;
+  }
+  console.log(i);
+}
+
+abc: for (var i = 0; i < 5; i++) {
+  for (var j = 0; j < 10; j++) {
+    xx = i * 10 + j;
+    if (xx == 35) {
+      continue abc;
+    }
+    console.log(xx);
+  }
+}
+
+// // ラベル
+
+label1: for (var i = 0; i < 10; i++) {
+  for (var j = 0; j < 10; j++) {
+    if (func(i, j)) {
+      break label1;
+    }
+    console.log(label1);
+  }
+}
+
+// オブジェクト参照
+
+with (document) {
+  console.log(bgColor);
+  console.log(fgColor);
+}
+
+// 例外処理
+
+try {
+  error = doSomething();
+  if (error) {
+    throw "myException";
+  }
+} catch (e) {
+  console.log(e);
+} finally {
+  console.log("finally");
+}
