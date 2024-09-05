@@ -24,52 +24,52 @@ console.log(c);
 
 // 条件分岐
 
-// n = 5;
-// if (n < 10) {
-//   alert("Small");
-// } else {
-//   alert("Big");
-// }
+n = 5;
+if (n < 10) {
+  console.log("Small");
+} else {
+  console.log("Big");
+}
 
-// if (n < 10) {
-//   alert("Small");
-// }
+if (n < 10) {
+  console.log("Small");
+}
 
-// n = 30;
-// if (n < 10) {
-//   alert("Small");
-// } else if (n > 20) {
-//   alert("Big");
-// } else {
-//   alert("Normal");
-// }
+n = 30;
+if (n < 10) {
+  console.log("Small");
+} else if (n > 20) {
+  console.log("Big");
+} else {
+  console.log("Normal");
+}
 
-// n = 2;
-// switch (n) {
-//   case 1:
-//     alert("One");
-//     break;
-//   case 2:
-//     alert("Two");
-//     break;
-//   case 3:
-//   case 4:
-//     alert("Three or Four");
-//     break;
-//   default:
-//     alert("Other");
-//     break;
-// }
+n = 2;
+switch (n) {
+  case 1:
+    console.log("One");
+    break;
+  case 2:
+    console.log("Two");
+    break;
+  case 3:
+  case 4:
+    console.log("Three or Four");
+    break;
+  default:
+    console.log("Other");
+    break;
+}
 
-// x = 1;
-// switch (x) {
-//   case 1:
-//     alert("One");
-//   case 2:
-//     alert("Two");
-//   default:
-//     alert("Other");
-// }
+x = 1;
+switch (x) {
+  case 1:
+    console.log("One");
+  case 2:
+    console.log("Two");
+  default:
+    console.log("Other");
+}
 
 // 繰り返し
 
@@ -148,14 +148,16 @@ abc: for (var i = 0; i < 5; i++) {
 
 // // ラベル
 
-label1: for (var i = 0; i < 10; i++) {
-  for (var j = 0; j < 10; j++) {
-    if (func(i, j)) {
-      break label1;
-    }
-    console.log(label1);
-  }
-}
+// const func = (a, b) => a === 2 && b === 3;
+// label1: for (var i = 0; i < 10; i++) {
+//   for (var j = 0; j < 10; j++) {
+//     if (func(i, j)) {
+//       break label1;
+//     }
+//   }
+// }
+
+// console.log(label1);
 
 // オブジェクト参照
 
@@ -176,3 +178,8 @@ try {
 } finally {
   console.log("finally");
 }
+
+// モジュール
+
+import { hello_world } from "./module.js";
+hello_world();
