@@ -1,3 +1,3 @@
 export function hello_world() {
-  alert("Hello world");
+  console.log("Hello world");
 }
