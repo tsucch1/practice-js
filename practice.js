@@ -6,14 +6,13 @@ function ohayou() {
 
 // 構文
 
-var a = 3;
-let b = 3;
+var a0 = 3;
+let b0 = 3;
 {
-  var a = 5;
-  let b = 5;
+  var a0 = 5;
+  let b0 = 5;
 }
-console.log(a);
-console.log(b);
+console.log(a0, b0);
 
 for (let i = 0; i < 10; i++) {
   console.log(i);
@@ -85,14 +84,14 @@ do {
   n6++;
 } while (n6 < 10);
 
-// for (i0 = 0; i0 < 10; i0++) {
-//   console.log(i0);
-// }
+for (let i0 = 0; i0 < 10; i0++) {
+  console.log(i0);
+}
 
-// let n7 = ["Blue", "Red", "Yellow"];
-// for (i1 in n7) {
-//   console.log(n7[i1]);
-// }
+let n7 = ["Blue", "Red", "Yellow"];
+for (let i1 in n7) {
+  console.log(n7[i1]);
+}
 
 var data = { namae: "Yamada", age: 26, country: "Japan" };
 for (var d in data) {
@@ -149,8 +148,8 @@ abc: for (var i5 = 0; i5 < 5; i5++) {
 // ラベル
 
 // const func = (a, b) => a === 2 && b === 3;
-// label1: for (var i6 = 0; i6 < 10; i6++) {
-//   for (var j6 = 0; j6 < 10; j6++) {
+// label1: for (let i6 = 0; i6 < 10; i6++) {
+//   for (let j6 = 0; j6 < 10; j6++) {
 //     if (func(i6, j6)) {
 //       break label1;
 //     }
@@ -208,9 +207,9 @@ let z1 = "ABC";
 console.log(x1, y1, z1);
 
 let x2 = x1 + 2;
-// x2=7のはずが5になる
+console.log(x2);
 let y2 = (x2 = 5);
-console.log(x2, y2);
+console.log(y2);
 
 // 算術演算子
 
@@ -223,6 +222,7 @@ console.log(x3, x4, x5, x6, x7);
 
 let x8 = 3 ** 2;
 let x9 = "123" + 4;
+
 console.log(x8, x9);
 
 let a1 = 5;
@@ -234,3 +234,57 @@ let b3 = ++a3;
 console.log(a1, a2, b2, a3, b3);
 
 // 比較演算子
+
+let x10 = 5;
+if (x10 == 5) {
+  console.log("x10 is 5.");
+}
+if (x10 != 5) {
+  console.log("x10 is not 5.");
+}
+
+if ("123" == 123) {
+  console.log("等しい");
+}
+
+if (x10 < 123) {
+  console.log("x10は123より小さいです。");
+}
+
+// if (xx < "H") {
+//   console.log("xxはHよりも前にあります。");
+// }
+
+if (123 == "123") {
+  console.log("等しい1");
+}
+
+if (123 === "123") {
+  console.log("等しい2");
+}
+
+if (123 === 123) {
+  console.log("等しい3");
+}
+
+if ("123" === "123") {
+  console.log("等しい4");
+}
+
+// 論理演算子
+
+let mon = 5;
+if (1 <= mon && mon <= 12) {
+  console.log("x is between 1 and 12.");
+}
+
+let x11 = "abc";
+if (x11 == "ABC" || x11 == "abc") {
+  console.log("x11 is ABC.");
+}
+
+if (!(x11 == 5)) {
+  console.log("x11 is not five.");
+}
+
+// 条件演算子
