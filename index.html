@@ -8,5 +8,17 @@
   </head>
   <body>
     <input type="button" value="js外部ファイル" onclick="ohayou()" />
+    <script type="module" src="practice.js"></script>
+
+    <script>
+      function func() {
+        alert(document.form1.text1.value + 4);
+        alert(Number(document.form1.text1.value) + 4);
+      }
+    </script>
+    <form name="form1" action="#">
+      <input type="text" name="text1" value="123" />
+      <input type="button" value="OK" onclick="func()" />
+    </form>
   </body>
 </html>
