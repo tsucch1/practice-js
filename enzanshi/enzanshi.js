@@ -145,13 +145,22 @@ console.log(x27, x28, x29, x30, x31, x32);
 
 // 論理代入演算子
 
-let x33 = (x34 = x35 = 10);
-x33 ||= 5; // よくわからない
+// let x33 = (x34 = x35 = 10);
+let x34 = 10;
+let x33;
+let x35;
+x33 ||= 5;
 x34 &&= 5;
-x35 ??= 5; // よくわからない
+x35 ??= 5;
 console.log(x33, x34, x35);
 
 // ヌル値関連演算子
+
+const obj = {
+  foo: undefined,
+};
+obj.foo = obj.foo ?? 60;
+console.log(obj.foo);
 
 // obj.foo = obj.foo ?? 60;
 // console.log(obj.foo);
@@ -160,21 +169,21 @@ console.log(x33, x34, x35);
 
 // その他の演算子
 
-var obj = {
+var obj2 = {
   name: "Yamada",
   age: 24,
 };
-console.log(obj.name);
-delete obj.name;
-console.log(obj.name);
+console.log(obj2.name);
+delete obj2.name;
+console.log(obj2.name);
 
 // typeof undefined;
 // typeof null;
 
-void function func() {
+function func() {
   console.log("Hello!");
-};
-// 何も表示されない
+}
+func();
 
 if ("appName" in navigator) {
   console.log("Yes");
