@@ -5,10 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>practice-js-enzanshi</title>
     <script src="event.js"></script>
+    <script>
+      function kansuu() {
+        alert("OK2");
+      }
+    </script>
   </head>
   <body>
     イベントハンドラ<br />
     <input type="button" value="OK" onclick="alert('OK!')" />
     <input type="button" value="AB" onclick="alert('A');alert('B')" />
+    <input type="button" value="OK2" onclick="kansuu()" />
+
+    <script>
+      function kakunin() {
+        if (window.confirm("よろしいですか？")) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+    <a href="xxx.htm" onclick="return kakunin">XXX</a>
+    <form action="xxx.cgi">
+      <input type="submit" value="確認" onclick="return kakunin('OK');" />
+    </form>
+
+    <!-- イベントハンドラの指定方法 -->
+
+    <input type="button" value="Hello" onclick="alert('Hello!')" />
+
+    <script>
+      window.onload = function () {
+        alert("Hello2");
+      };
+      document.getElementById("button1").onclick = function () {
+        alert("Clicked!");
+      };
+    </script>
+    <input type="button" id="button1" />
+    <!-- 上記動きがおかしい？ -->
+
+    <script>
+      window.addEventListener("load", function () {
+        console.log("Hello A");
+      });
+      window.addEventListener("load", function () {
+        console.log("Hello B");
+      });
+    </script>
+
+    <!-- 各種イベントハンドラ -->
   </body>
 </html>
