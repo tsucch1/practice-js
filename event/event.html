@@ -56,5 +56,113 @@
     </script>
 
     <!-- 各種イベントハンドラ -->
+    <div>
+      <p>onclick,ondblclick</p>
+      <input type="button" value="Click me" onclick="alert('Clicked')" />
+      <input
+        type="button"
+        value="Double Click me"
+        ondblclick="alert('Double Clicked')"
+      />
+    </div>
+
+    <div>
+      <p>onkeydown,press,up</p>
+      <input
+        type="text"
+        onkeypress="document.getElementById('t1').innerHTML += '[Press]'"
+        onkeydown="document.getElementById('t1').innerHTML += '[Down]'"
+        onkeyup="document.getElementById('t1').innerHTML += '[Up]'"
+      />
+      <div id="t1">Event:</div>
+    </div>
+
+    <div>
+      <p>onmousedown,up,over,out,move</p>
+      <input
+        type="button"
+        value="Hover your mouse."
+        onmousedown="document.getElementById('t2').innerHTML += '[Down]'"
+        onmouseup="document.getElementById('t2').innerHTML += '[Up]'"
+        onmouseover="document.getElementById('t2').innerHTML += '[Over]'"
+        onmouseout="document.getElementById('t2').innerHTML += '[Out]'"
+        onmousemove="document.getElementById('t2').innerHTML += '[Move]'"
+      />
+      <div id="t2">Event:</div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        alert("onload!");
+      };
+      window.onbeforeunload = function () {
+        return "本当にこのページから離れますか？";
+      };
+    </script>
+
+    <div>
+      <p>onfocus,blur</p>
+      <input
+        type="text"
+        name="text"
+        onfocus="document.getElementById('t3').innerHTML += '[Focus]'"
+        onblur="document.getElementById('t3').innerHTML += '[Blur]'"
+      />
+      <div id="t3">Event:</div>
+    </div>
+
+    <div>
+      <p>onsubmit,reset</p>
+      <script>
+        function doSubmit(form) {
+          if (window.confirm("送信してよろしいですか？")) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+      </script>
+      <form action="sample.cgi" method="post" onsubmit="return doSubmit(this)">
+        <input type="text" name="word" value="OKを押して送信" />
+        <input type="submit" value="OK" />
+      </form>
+    </div>
+
+    <div>
+      <p>onchange</p>
+      <script>
+        function doChange() {
+          document.getElementById("t4").innerHTML += "[Change]";
+        }
+      </script>
+      <input type="checkbox" name="check1" onchange="doChange()" />
+      <input type="text" name="text1" onchange="doChange()" />
+      <select onchange="doChange()">
+        <option>AAA</option>
+        <option>BBB</option>
+      </select>
+      <div id="t4">Event:</div>
+    </div>
+
+    <div>
+      <p>oninput</p>
+      <script>
+        function doInput() {
+          document.getElementById("t5").innerHTML += "[Input]";
+        }
+      </script>
+      <input type="text" name="text1" oninput="doInput()" />
+      <div id="t5">Event:</div>
+    </div>
+
+    <div>
+      <p>onselect</p>
+      <script>
+        window.onselect = function () {
+          alert("Selected");
+        };
+      </script>
+      <textarea>Select this text.</textarea>
+    </div>
   </body>
 </html>
